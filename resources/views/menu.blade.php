@@ -11,12 +11,14 @@
           </p>
         </a>
         <ul class="nav nav-treeview">
+          @can('Products.index')
           <li class="nav-item">
             <a href="{{route('products.index')}}" class="nav-link">
               <i class="fas fa-fire-alt"></i>
               <p>Producto</p>
             </a>
           </li>
+          @endcan
           <li class="nav-item">
             <a href="{{route('categorys.index')}}" class="nav-link">
               <i class="fas fa-fire-alt"></i>
@@ -58,12 +60,12 @@
               <p>Fixed Sidebar</p>
             </a>
           </li>
-          <li class="nav-item">
+        <li class="nav-item">
             <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>Fixed Sidebar <small>+ Custom Area</small></p>
             </a>
-          </li>
+          </li> 
           <li class="nav-item">
             <a href="pages/layout/fixed-topnav.html" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
@@ -83,7 +85,7 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> 
 
 
       

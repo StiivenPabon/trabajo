@@ -19,14 +19,9 @@
         </div>
       </form>
       
-      
-    
   </div>
 
 <style>
-
-
-
 .conten-form {
   display: flex;
   flex-direction: column;
@@ -39,8 +34,6 @@
   margin-bottom: 30px;
 }
 
-.btn
-
 .form-control {
   width: 150%;
   padding: 10px;
@@ -52,8 +45,6 @@
   width: 100%;
   max-width: 200px; 
 }
-
 </style>
 
 @stop
-
