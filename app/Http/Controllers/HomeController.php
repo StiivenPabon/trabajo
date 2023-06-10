@@ -26,4 +26,7 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function contenido(){
+        return view('layouts.contenido');
+    }
 }

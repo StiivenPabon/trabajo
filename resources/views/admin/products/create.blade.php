@@ -24,8 +24,9 @@
         <select class="custom-select" id="inputGroupSelect01" name="category_id">
           <option require selected>Seleciona</option>
           @foreach ($category as $categorys)
-            <option value="{{ $categorys->id }}" required> {{ $categorys->name }} </option>
-          @endforeach         
+          <option value="{{ $categorys->id }}" required> {{ $categorys->name }} </option>
+          @endforeach
+         
         </select>
       </div>
       <div class="input-group mb-3">
@@ -35,7 +36,7 @@
         <select class="custom-select" id="inputGroupSelect01" name="subcategory_id">
           <option required selected>Seleciona</option>
           @foreach ($subcategory as $subcategorys)
-            <option value="{{ $subcategorys->id }}" required> {{ $subcategorys->name }} </option>
+          <option value="{{ $subcategorys->id }}" required> {{ $subcategorys->name }} </option>
           @endforeach
         </select>
       </div>
@@ -44,43 +45,52 @@
     </form>
 
     @if(session('success'))
-      <div class="alert alert-success">
+    <div class="alert alert-success">
         {{ session('success') }}
-      </div>
-    @endif
+    </div>
+@endif
     
   </div>
 
-  <style>
-    .conten-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+<style>
 
-    .form-group {
-      width: 100%;
-      max-width: 400px; 
-      margin-bottom: 20px;
-    }
 
-    .form-control {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
 
-    .btn {
-      width: 120%;
-      max-width: 220px; 
-    }
-  </style>
+.conten-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  <script>
-    function options(){
-      var optionCategory = document.getElementById
-    }
-  </script>
+.form-group {
+  width: 100%;
+  max-width: 400px; 
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 120%;
+  max-width: 220px; 
+}
+
+</style>
+
+<script>
+
+function options(){
+  var optionCategory = document.getElementById
+}
+
+
+
+</script>
 
 @stop
+

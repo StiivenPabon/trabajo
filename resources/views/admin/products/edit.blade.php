@@ -11,7 +11,6 @@
         <input type="number" class="form-control" id="exampleText" disabled placeholder="{{$product->id}}">
         <label for="exampleInputEmail1">Nombre Producto</label>
         <input type="text" class="form-control" id="exampleText" value="{{$product->name}}" name="name">
-      </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Precio</label>
         <input type="number" class="form-control" id="exampleInput" value="{{$product->price}}" name="price">
@@ -25,60 +24,64 @@
           <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
         </div>
         <select class="custom-select" id="inputGroupSelect01" name="category_id">
-          <option disabled>Seleciona</option>
+          <option  disabled>Seleciona</option>
           @foreach ($category as $categorys)
-            @if ($categorys->id == $product->category_id)
-              <option value="{{$categorys->id }}" selected>{{$categorys->name}}</option>
-            @else
-              <option value="{{$categorys->id}}">{{$categorys->name}}</option>
-            @endif 
+          @if ($categorys->id == $product->category_id)
+          <option  value="{{$categorys->id }}">{{$categorys->name}}</option>
+           @else
+          <option value="{{$categorys->id}}">{{$categorys->name}}</option>
+          @endif 
           @endforeach
         </select>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Subcategoria</label>
-        </div>
-        <select class="custom-select" id="inputGroupSelect01" name="subcategory_id">
-          <option disabled>Seleciona</option>
-          @foreach ($subcategory as $subcategorys)
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Subcategoria</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" name="subcategory_id">
+            <option  disabled>Seleciona</option>
+            @foreach ($subcategory as $subcategorys)
             @if ($subcategorys->id == $product->subcategorys_id)
-              <option value="{{$subcategorys->id }}" selected>{{$subcategorys->name}}</option>
+            <option value="{{$subcategorys->id }}">{{$subcategorys->name}} </option>
             @else
-              <option value="{{$subcategorys->id}}">{{$subcategorys->name}}</option>
+            <option value="{{$subcategorys->id}}">{{$subcategorys->name}}</option>
             @endif
-          @endforeach
-        </select>
+            @endforeach
+          </select>
+        </div>
       </div>
       <button type="submit" class="btn btn-primary">Actualiza Productos</button>
     </form>
 
+    
   </div>
 
-  <style>
-    .conten-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+<style>
 
-    .form-group {
-      width: 100%;
-      max-width: 400px; 
-      margin-bottom: 20px;
-    }
+.conten-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .form-control {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
+.form-group {
+  width: 100%;
+  max-width: 400px; 
+  margin-bottom: 20px;
+}
 
-    .btn {
-      width: 100%;
-      max-width: 200px; 
-    }
-  </style>
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 100%;
+  max-width: 200px; 
+}
+
+</style>
 
 @stop
+
