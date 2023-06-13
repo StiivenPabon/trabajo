@@ -85,7 +85,8 @@ class CategoryController extends Controller
             $categorias->state = 0; 
             $categorias->save();
     
-            return redirect()->route('categorys.index');
+            return redirect()->route('categorys.index')
+            ->with('eliminar', 'Registro eliminado exitosamente.');;
         }
     
         return redirect()->route('categorys.index');

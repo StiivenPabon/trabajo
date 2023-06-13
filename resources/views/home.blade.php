@@ -5,6 +5,7 @@
 <!DOCTYPE html
 <html lang="en">
 <head>
+  @yield('css')
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard 2</title>
@@ -178,14 +179,38 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="{{asset('img/MykeTowers.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Myke Towers</a>
         </div>
+      </div> --}}
+
+
+      <div class="user-panel mt-4 pb-5 mb-3 d-flex">
+        <div class="image">
+          <img src="{{asset('img/MykeTowers.jpg')}}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="dropdown">
+          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+          </a>
+      
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+            </a>
+      
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
+          </div>
+        </div>
       </div>
+
+      
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -249,6 +274,10 @@
 <script src="{{asset('js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('js/dashboard2.js')}}"></script>
+@yield('js')
+
+@yield('ajax')
+
 </body>
 </html>
 

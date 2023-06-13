@@ -7,6 +7,7 @@ use PhpParser\Node\Expr\FuncCall;
 use App\Http\Controllers\SubCategory;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,9 @@ Route::resource('/categorys',CategoryController::class)->names('categorys');
 
 Route::resource('/Subcategory',SubCategoryController::class)->names('sub');
 
+Route::resource('/users', UsersController::class)->names('users');
 
-Route::get('contenido',[App\Http\Controllers\HomeController::class, 'contenido']);
+
+
+
  

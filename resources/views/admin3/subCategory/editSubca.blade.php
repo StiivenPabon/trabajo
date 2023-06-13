@@ -28,11 +28,25 @@
         </div>
           </select>
         <div class="form-group d-flex justify-content-between">
-            <button type="submit" class="btn btn-primary mr-1">Actualizar Subcategoría</button>
-            <button type="button" class="btn btn-danger">Cancelar actualización</button>
+            <button type="submit" class="btn btn-primary mt-3">Actualizar Subcategoría</button>
+            <button type="button" class="btn btn-danger mt-3"  onclick="cancelarActualizacion()">Cancelar actualización</button>
         </div>
     </form>
 </div>
+
+
+@section('js')
+<script>
+  function cancelarActualizacion() {
+      // Redireccionar al usuario a otra página
+      window.location.href = "{{ route('categorys.index') }}";
+      
+  
+      // O mostrar un mensaje al usuario
+      alert("Actualización cancelada");
+  }
+</script>
+@endsection
 
 <style>
     .conten-form {

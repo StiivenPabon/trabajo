@@ -106,11 +106,14 @@ class ProductController extends Controller
             $registros->state = 0; 
             $registros->save();
     
-            return redirect()->route('products.index');
+            return redirect()->route('products.index')
+            ->with('eliminar', 'Registro eliminado exitosamente.');
         }
     
         return redirect()->route('products.index');
-       /*/ if ($registros) {
+      
+      
+        /*/ if ($registros) {
             $registros->delete();
     
             return redirect()->route('products.index')
