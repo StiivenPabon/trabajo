@@ -40,7 +40,7 @@
             @endforeach
         </tbody>
     </table>
-</div>
+
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
@@ -87,6 +87,9 @@
     });
 </script>
 @endsection
+
+<a class="btn btn-outline-primary" href="{{ route('products.create') }}">Crear Productos</a>
+</div>
 
 @stop
 

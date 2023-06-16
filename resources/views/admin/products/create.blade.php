@@ -22,7 +22,7 @@
           <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
         </div>
         <select class="custom-select" id="inputGroupSelect01" name="category_id">
-          <option require selected>Seleciona</option>
+          <option require selected disabled>Seleciona</option>
           @foreach ($category as $categorys)
           <option value="{{ $categorys->id }}" required> {{ $categorys->name }} </option>
           @endforeach
@@ -34,7 +34,7 @@
           <label class="input-group-text" for="inputGroupSelect01">Subcategoria</label>
         </div>
         <select class="custom-select" id="inputGroupSelect01" name="subcategory_id">
-          <option required selected>Seleciona</option>
+          <option required selected disabled>Seleciona</option>
           @foreach ($subcategory as $subcategorys)
           <option value="{{ $subcategorys->id }}" required> {{ $subcategorys->name }} </option>
           @endforeach

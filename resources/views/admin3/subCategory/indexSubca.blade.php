@@ -29,6 +29,8 @@
             </tr>
          @endforeach 
         </tbody>
+
+        
     
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
@@ -39,8 +41,7 @@
     
 
 
-    <a class="btn btn-outline-primary" href="{{ route('sub.create') }}">Crear Categooria   </a>
-</div>
+
 
 @section('js')
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -55,5 +56,8 @@ $(document).ready(function () {
     </script>
     @endsection
 
+  
 
+    <a class="btn btn-outline-primary" href="{{ route('sub.create') }}">Crear Subcategooria</a>
+</div>
 @stop
