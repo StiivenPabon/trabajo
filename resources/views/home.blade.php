@@ -24,7 +24,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="{{asset('img/laviidaesuna.png')}}" alt="Myke" height="200" width="200">
+    <img class="animation__wobble" src="{{asset('images/laviidaesuna.png')}}" alt="Myke" height="200" width="200">
            <h1>LA VIDA ES UNA</h1>
   </div>
 
@@ -36,7 +36,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="{{ url('/welcome') }}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
